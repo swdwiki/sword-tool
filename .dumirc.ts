@@ -1,6 +1,9 @@
 import { defineConfig } from 'dumi';
 import { defineThemeConfig } from 'dumi-theme-antd/dist/defineThemeConfig';
 
+const defaultPath = '/sword-tool'; 
+//打包后gh-pages默认会拼接仓库名称在路径上
+const baseUrl = process.env.NODE_ENV === 'production' ? defaultPath : '';
 
 export default defineConfig({
   outputPath: 'docs-dist',
@@ -12,6 +15,8 @@ export default defineConfig({
       {type: 'hooks', dir: './src/hooks'},
     ]
   },
+  base: defaultPath,
+  publicPath: `${baseUrl}/`,
   apiParser: {},
   themeConfig: defineThemeConfig({
       name: 'Sword Design Tools',

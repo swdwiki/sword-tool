@@ -4,6 +4,7 @@
   "description": "SwordDesign UI",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": false,
   "scripts": {
     "start": "npm run dev",
     "dev": "dumi dev",
