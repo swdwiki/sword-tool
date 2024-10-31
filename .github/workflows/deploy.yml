@@ -13,8 +13,6 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     environment: production
-    env:
-      PUBLIC_API_ENDPOINT: ${{vars.PUBLIC_API_ENDPOINT}}
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
